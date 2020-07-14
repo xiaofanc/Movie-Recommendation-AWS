@@ -11,8 +11,7 @@ The Project is to build an ETL pipeline that extracts data from S3, processes th
 * Complete data: 's3://udacity-input/ml-latest'  
 
 
-#### Movies Data File Structure (movies.csv)
---------------------------------------------
+#### Movies Data File Structure (movies.csv)  
 
 Movie information is contained in the file `movies.csv`. Each line of this file after the header row represents one movie, and has the following format:
 
@@ -43,8 +42,7 @@ Genres are a pipe-separated list, and are selected from the following:
 * (no genres listed)
 
 
-#### Ratings Data File Structure (ratings.csv)
-----------------------------------------------
+#### Ratings Data File Structure (ratings.csv)  
 
 All ratings are contained in the file `ratings.csv`. Each line of this file after the header row represents one rating of one movie by one user, and has the following format:
 
@@ -53,8 +51,7 @@ All ratings are contained in the file `ratings.csv`. Each line of this file afte
 The lines within this file are ordered first by userId, then, within user, by movieId. Ratings are made on a 5-star scale, with half-star increments (0.5 stars - 5.0 stars). Timestamps represent seconds since midnight Coordinated Universal Time (UTC) of January 1, 1970.
 
 
-#### Tags Data File Structure (tags.csv)
-----------------------------------------
+#### Tags Data File Structure (tags.csv)  
 
 All tags are contained in the file `tags.csv`. Each line of this file after the header row represents one tag applied to one movie by one user, and has the following format:
 
