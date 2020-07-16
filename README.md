@@ -96,8 +96,9 @@ Using the above datasets, I need to create a star schema optimized for queries o
 
 ### Build ETL Pipeline
 * Implement the logic in etl.ipynb to extract data from s3 
-* Transform data into fact and dimension tables
-* Load tables into redshift
+* Data Wrangling with DataFrames and Spark SQL (clean and explore data)
+* Transform data into fact and dimension tables, and load them to redshift
+
 * Analysis
 Q1: Explore the data with some basic plots  
 **PLOT#1**: Number of movies and ratings per year.  
