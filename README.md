@@ -1,12 +1,12 @@
 # Movie Recommmendation with Spark
 ## Introduction
 
-The project uses datasets (ml-latest) including 5-star rating and free-text tagging activity from [MovieLens](http://movielens.org), a movie recommendation service. The complete dataset contains 27753444 ratings and 1108997 tag applications across 58098 movies. These data were created by 283228 users between January 09, 1995 and September 26, 2018. This dataset was generated on September 26, 2018.
+The project uses datasets (ml-latest) including 5-star rating and free-text tagging activity from [MovieLens](https://grouplens.org/datasets/movielens/latest/), a movie recommendation service. The complete dataset contains 27753444 ratings and 1108997 tag applications across 58098 movies. These data were created by 283228 users between January 09, 1995 and September 26, 2018. This dataset was generated on September 26, 2018.
 
 The Project is to build an ETL pipeline that extracts data from S3, processes them using Spark, stages them in Redshift, and transforms data into a set of dimensional tables.
 
 
-## Project Datasets
+## Project Datasets 
 * Test data: 's3://udacity-input/ml-latest-small'  
 * Complete data: 's3://udacity-input/ml-latest'  
 
@@ -60,6 +60,12 @@ All tags are contained in the file `tags.csv`. Each line of this file after the 
 The lines within this file are ordered first by userId, then, within user, by movieId. Tags are user-generated metadata about movies. Each tag is typically a single word or short phrase. The meaning, value, and purpose of a particular tag is determined by each user. Timestamps represent seconds since midnight Coordinated Universal Time (UTC) of January 1, 1970.
 
 
+#### Awards Data File (Award.txt)
+
+All awards are contained in the file `Awards.txt`. The file is copied from Wikipedia <https://en.wikipedia.org/wiki/List_of_Academy_Award-winning_films>
+
+* Film, year, awards, nominations
+
 ## Schema for Movie Recommendation Analysis
 Using the above datasets, I need to create a star schema optimized for queries on movie recommendation analysis. This includes the following tables.
 
@@ -69,7 +75,7 @@ Using the above datasets, I need to create a star schema optimized for queries o
 ### Dimension Tables
 * **movies** - (movieId, title, release_year)   
 * **genres** - (movieId, genres)  
-* **ratings** - (userId, movieId, rating, timestamp, year)  
+* **ratings** - (userId, movieId, rating, timestamp)  
 * **time** - timestamps in ratings broken down into specific units (start_time, day, week, month, year, weekday)
 
 
