@@ -99,18 +99,18 @@ Using the above datasets, I need to create a star schema optimized for queries o
 * Transform data into fact and dimension tables
 * Load tables into redshift
 * Analysis
-Q1: Explore the data with some basic plots
-**PLOT#1**: Number of movies and ratings per year.
-**PLOT#2**: Cumulative number of movies, in total and per genre.
-**PLOT#3**: Distributions by genre, on top of total rating distribution. This will help identifying consitent ratings or outliers (e.g. Comedies being rated higher in general).
-**PLOT#4**: Compute basic statistics (avg, std) per genre. Plot dispersion (box plot).
-**PLOT#5**: Average rating for all individual movies.
-**PLOT#6**: Average rating for all movies in each year, and also per genre.
-**PLOT#8**: Average ratings per user.
-**PLOT#9**: Rating timestamp vs. movie year vs. rating count
-**PLOT#10**: Rating timestamp vs. movie year vs. average rating
-**PLOT#11**: Ratings per user.
-**PLOT#12**: Ratings per movie.
+Q1: Explore the data with some basic plots  
+**PLOT#1**: Number of movies and ratings per year.  
+**PLOT#2**: Cumulative number of movies, in total and per genre.  
+**PLOT#3**: Distributions by genre, on top of total rating distribution. This will help identifying consitent ratings or outliers (e.g. Comedies being rated higher in general).  
+**PLOT#4**: Compute basic statistics (avg, std) per genre. Plot dispersion (box plot).  
+**PLOT#5**: Average rating for all individual movies.  
+**PLOT#6**: Average rating for all movies in each year, and also per genre.  
+**PLOT#8**: Average ratings per user.  
+**PLOT#9**: Rating timestamp vs. movie year vs. rating count  
+**PLOT#10**: Rating timestamp vs. movie year vs. average rating  
+**PLOT#11**: Ratings per user.  
+**PLOT#12**: Ratings per movie.  
 
 
 
