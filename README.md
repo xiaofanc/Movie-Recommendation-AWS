@@ -60,11 +60,16 @@ All tags are contained in the file `tags.csv`. Each line of this file after the 
 The lines within this file are ordered first by userId, then, within user, by movieId. Tags are user-generated metadata about movies. Each tag is typically a single word or short phrase. The meaning, value, and purpose of a particular tag is determined by each user. Timestamps represent seconds since midnight Coordinated Universal Time (UTC) of January 1, 1970.
 
 
-#### Awards Data File (Award.txt)
+#### Awards Data File (Awards.txt)
 
 All awards are contained in the file `Awards.txt`. The file is copied from Wikipedia <https://en.wikipedia.org/wiki/List_of_Academy_Award-winning_films>
 
 * Film, year, awards, nominations
+
+#### Awards Data File (Award_corrected.txt)
+
+Correction for the Awards.txt  
+
 
 ## Schema for Movie Recommendation Analysis
 Using the above datasets, I need to create a star schema optimized for queries on movie recommendation analysis. This includes the following tables.
