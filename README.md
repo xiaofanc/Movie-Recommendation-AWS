@@ -86,7 +86,7 @@ Using the above datasets, I need to create a star schema optimized for queries o
 
 ## Project Template
 * **create_redshift_cluster.ipynb** create redshift cluster
-* **etl.ipynb** read data from s3, staging to redshift, and create tables
+* **etl.ipynb** read data from s3, staging to redshift, and create dimension tables
 * **dwh.cfg** contains AWS credentials       
 
 
@@ -100,9 +100,9 @@ Using the above datasets, I need to create a star schema optimized for queries o
 
 
 ### Build ETL Pipeline
-* Implement the logic in etl.ipynb to extract data from s3 
-* Data Wrangling with DataFrames and Spark SQL (clean and explore data)
-* Transform data into fact and dimension tables, and load them to redshift
+* Step 1: Implement the logic in etl.ipynb to extract data from s3 
+* Step 2: Data Wrangling with DataFrames and Spark SQL (clean and explore data)
+* Step 3: Transform data into fact and dimension tables, and load them to redshift
 
 * Analysis
 Q1: Explore the data with some basic plots  
