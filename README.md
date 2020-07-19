@@ -100,7 +100,7 @@ Using the above datasets, I need to create a star schema optimized for queries o
 
 
 ### Build ETL Pipeline
-* Step 1: Implement the logic in etl.ipynb to extract data from s3, and load data back to S3
+* Step 1: Implement the logic in etl.ipynb to extract data from s3, and load data back to S3 in parquet format 
 * Step 2: Data Wrangling with DataFrames and Spark SQL (clean and explore data)
 * Step 3: Transform data into fact and dimension tables, and load them to redshift
 
