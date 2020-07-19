@@ -1,3 +1,4 @@
+Film   |Year   |Awards    |Nominations
 Becket  |1964    |1   |12
 Ben-Hur |1959    |11  |12
 Dances with Wolves  |1990    |7   |12
