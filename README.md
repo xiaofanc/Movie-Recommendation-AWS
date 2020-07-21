@@ -87,7 +87,7 @@ Using the above datasets, I need to create fact and dimension tables optimized f
 * Step 2: Data Wrangling with DataFrames and Spark SQL (clean and explore data)
 * Step 3: Extract data from S3, transform data into fact and dimension tables, and load them to redshift
 
-* reference: 
+#### reference: 
 [More Analysis with plots](https://www.kaggle.com/cesarcf1977/movielens-data-analysis-beginner-s-first?select=tag.csv)  
 Explore the data with some basic plots  
 
