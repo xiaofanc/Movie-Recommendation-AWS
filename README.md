@@ -23,25 +23,7 @@ Movie titles are entered manually or imported from <https://www.themoviedb.org/>
 
 Genres are a pipe-separated list, and are selected from the following:
 
-* Action
-* Adventure
-* Animation
-* Children's
-* Comedy
-* Crime
-* Documentary
-* Drama
-* Fantasy
-* Film-Noir
-* Horror
-* Musical
-* Mystery
-* Romance
-* Sci-Fi
-* Thriller
-* War
-* Western
-* (no genres listed)
+* Action, Adventure, Animation, Children's, Comedy, Crime, Documentary, Drama, Fantasy, Film-Noir, Horror, Musical, Mystery, Romance, Sci-Fi, Thriller, War, Western, (no genres listed)
 
 
 #### Ratings Data File Structure (ratings.csv)  
@@ -106,7 +88,7 @@ Using the above datasets, I need to create fact and dimension tables optimized f
 * Step 3: Extract data from S3, transform data into fact and dimension tables, and load them to redshift
 
 * reference: 
-[More Analysis with plots](https://www.kaggle.com/cesarcf1977/movielens-data-analysis-beginner-s-first?select=tag.csv)
+[More Analysis with plots](https://www.kaggle.com/cesarcf1977/movielens-data-analysis-beginner-s-first?select=tag.csv)  
 Explore the data with some basic plots  
 **PLOT#1**: Number of movies and ratings per year.  
 **PLOT#2**: Cumulative number of movies, in total and per genre.  
