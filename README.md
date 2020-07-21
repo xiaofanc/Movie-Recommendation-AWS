@@ -1,7 +1,9 @@
-# Movie Recommmendation with Spark
+# Movie Recommmendation with Spark and AWS
 ## Introduction
 
-The project uses datasets (ml-latest) including 5-star rating and free-text tagging activity from [MovieLens](https://grouplens.org/datasets/movielens/latest/), a movie recommendation service. The complete dataset contains 27753444 ratings and 1108997 tag applications across 58098 movies. These data were created by 283228 users between January 09, 1995 and September 26, 2018. This dataset was generated on September 26, 2018.
+The project uses datasets (ml-latest-small) including 5-star rating and free-text tagging activity from [MovieLens](https://grouplens.org/datasets/movielens/latest/), a movie recommendation service. It contains 100836 ratings and 3683 tag applications across 9742 movies. These data were created by 610 users between March 29, 1996 and September 24, 2018. This dataset was generated on September 26, 2018.
+
+The complete dataset contains 27753444 ratings and 1108997 tag applications across 58098 movies. Data were created by 283228 users between January 09, 1995 and September 26, 2018. This dataset was generated on September 26, 2018.
 
 The Project is to build an ETL pipeline that extracts data from S3, processes them using Spark, stages them in Redshift, and transforms data into a set of dimensional tables.
 
@@ -72,16 +74,15 @@ Correction for the Awards.txt
 
 
 ## Schema for Movie Recommendation Analysis
-Using the above datasets, I need to create a star schema optimized for queries on movie recommendation analysis. This includes the following tables.
+Using the above datasets, I need to create fact and dimension tables optimized for queries on movie recommendation analysis. This includes the following tables.
 
 
-### Fact Tables
-* **movieratings** - (movieId, rating, release_year, rewards)
-### Dimension Tables
-* **movies** - (movieId, title, release_year)   
-* **genres** - (movieId, genres)  
-* **ratings** - (userId, movieId, rating, timestamp)  
-* **time** - timestamps in ratings broken down into specific units (start_time, day, week, month, year, weekday)
+### Fact and dimension tables
+* **awards** - (film, year, nominations, awards)
+* **movies** - (movieId, title, year)   
+* **genres** - (genreId, movieId, genre)  
+* **ratings** - (userId, movieId, rating, rate_time)  
+* **time** - timestamps in ratings broken down into specific units (date_key, day, week, month, year, weekday)
 
 
 ## Project Template
@@ -102,10 +103,11 @@ Using the above datasets, I need to create a star schema optimized for queries o
 ### Build ETL Pipeline
 * Step 1: Implement the logic in etl.ipynb to extract data from s3, and load data back to S3 in parquet format 
 * Step 2: Data Wrangling with DataFrames and Spark SQL (clean and explore data)
-* Step 3: Transform data into fact and dimension tables, and load them to redshift
+* Step 3: Extract data from S3, transform data into fact and dimension tables, and load them to redshift
 
-* Analysis
-Q1: Explore the data with some basic plots  
+* reference: 
+[More Analysis with plots](https://www.kaggle.com/cesarcf1977/movielens-data-analysis-beginner-s-first?select=tag.csv)
+Explore the data with some basic plots  
 **PLOT#1**: Number of movies and ratings per year.  
 **PLOT#2**: Cumulative number of movies, in total and per genre.  
 **PLOT#3**: Distributions by genre, on top of total rating distribution. This will help identifying consitent ratings or outliers (e.g. Comedies being rated higher in general).  
