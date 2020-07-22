@@ -71,7 +71,7 @@ Using the above datasets, I need to create fact and dimension tables optimized f
 * **create_redshift_cluster.ipynb** create redshift cluster
 * **etl.ipynb** read data from s3, staging to redshift, and create dimension tables
 * **dwh.cfg** contains AWS credentials       
-
+* **etl_v_2.ipynb** organize the orders and add more documentation
 
 ## Project Steps
 ### Create user on AWS
